@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Multani Law Group – Immigration Lawyers | Kent, WA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .demo-banner {
+            background: #1a1a2e;
+            color: #e2c96e;
+            font-size: 0.8rem;
+            padding: 8px 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .demo-banner a {
+            background: #e2c96e;
+            color: #1a1a2e;
+            text-decoration: none;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .demo-banner a:hover {
+            background: #d4b852;
+        }
+
+        .navbar {
+            position: sticky;
+            top: 0;
+            background: #1B365D;
+            color: white;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #C9A961;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .phone-number {
+            font-weight: 600;
+            color: white;
+        }
+
+        .btn {
+            background: #C9A961;
+            color: #1B365D;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #B59851;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid #C9A961;
+        }
+
+        .btn-secondary:hover {
+            background: #C9A961;
+            color: #1B365D;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #1B365D 0%, #2A4A6B 100%);
+            color: white;
+            padding: 4rem 5% 6rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            opacity: 0;
+            animation: fadeInUp 1s ease forwards;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0;
+            animation: fadeInUp 1s ease 0.3s forwards;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            opacity: 0;
+            animation: fadeInUp 1s ease 0.6s forwards;
+        }
+
+        .services {
+            padding: 4rem 5%;
+            background: #f8f9fa;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #1B365D;
+            margin-bottom: 3rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: #C9A961;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.3rem;
+            color: #1B365D;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .why-choose {
+            padding: 4rem 5%;
+            background: white;
+        }
+
+        .trust-signals {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .trust-signal {
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        .trust-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #C9A961;
+            display: block;
+        }
+
+        .trust-label {
+            font-size: 1.1rem;
+            color: #1B365D;
+            font-weight: 600;
+        }
+
+        .reviews {
+            padding: 4rem 5%;
+            background: #f8f9fa;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .review-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .stars {
+            color: #C9A961;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .review-text {
+            margin-bottom: 1rem;
+            font-style: italic;
+            color: #555;
+        }
+
+        .reviewer-name {
+            font-weight: 600;
+            color: #1B365D;
+        }
+
+        .contact {
+            padding: 4rem 5%;
+            background: #1B365D;
+            color: white;
+        }
+
+        .contact-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-form {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            padding: 1rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .emergency-notice {
+            background: #C9A961;
+            color: #1B365D;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .footer {
+            background: #0F1E2E;
+            color: white;
+            padding: 2rem 5%;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-info {
+            margin-bottom: 2rem;
+        }
+
+        .footer-info h3 {
+            color: #C9A961;
+            margin-bottom: 1rem;
+        }
+
+        .multilingual-notice {
+            background: #C9A961;
+            color: #1B365D;
+            padding: 1rem;
+            text-align: center;
+            font-weight: 500;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 1rem 3%;
+            }
+
+            .nav-right {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .hero {
+                padding: 3rem 3% 4rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .services,
+            .why-choose,
+            .reviews,
+            .contact {
+                padding: 3rem 3%;
+            }
+
+            .demo-banner {
+                flex-direction: column;
+                text-align: center;
+                gap: 5px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .trust-number {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-banner">
+        <span>✦ Demo site created for Multani Law Group – Immigration Lawyers by Vertex Consulting Group</span>
+        <a href="mailto:tarik@vertexconsultinggroup.com">Get Your Site →</a>
+    </div>
+
+    <nav class="navbar">
+        <div class="logo">Multani Law Group</div>
+        <div class="nav-right">
+            <div class="phone-number">(206) 703-4777</div>
+            <a href="tel:2067034777" class="btn">Book a Call</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>Expert Immigration Legal Services in Kent, WA</h1>
+        <p>Navigate your immigration journey with confidence. Our experienced attorneys provide compassionate, comprehensive legal support for families and businesses seeking to build their future in America.</p>
+        <div class="hero-buttons">
+            <a href="tel:2067034777" class="btn">Book Free Consultation</a>
+            <a href="tel:2067034777" class="btn btn-secondary">Call Now</a>
+        </div>
+    </section>
+
+    <div class="multilingual-notice">
+        <strong>Multilingual Support Available:</strong> English • Spanish • Punjabi • Hindi • Urdu
+    </div>
+
+    <section class="services" id="services">
+        <h2 class="section-title">Our Immigration Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">👨‍👩‍👧‍👦</div>
+                <h3>Family Immigration</h3>
+                <p>Reunite with your loved ones through family-based visas, green card applications, and permanent residency processes. We handle spouse visas, fiancé visas, and family reunification cases with care and expertise.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">💼</div>
+                <h3>Business & Work Visas</h3>
+                <p>Secure your professional future with employment-based visas, investor visas, and business immigration solutions. From H-1B to EB-5, we guide employers and employees through complex work authorization processes.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">⚖️</div>
+                <h3>Deportation Defense</h3>
+                <p>Protect your right to remain in the United States. Our skilled attorneys provide aggressive defense in removal proceedings, appeals, and emergency stays to keep families together.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🇺🇸</div>
+                <h3>Citizenship & Naturalization</h3>
+                <p>Achieve your American dream through naturalization. We assist with citizenship applications, test preparation, and address any complications that may arise in your path to becoming a U.S. citizen.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-choose" id="about">
+        <h2 class="section-title">Why Choose Multani Law Group</h2>
+        <div class="trust-signals">
+            <div class="trust-signal">
+                <span class="trust-number">15+</span>
+                <div class="trust-label">Years of Experience</div>
+            </div>
+            <div class="trust-signal">
+                <span class="trust-number">5</span>
+                <div class="trust-label">Languages Spoken</div>
+            </div>
+            <div class="trust-signal">
+                <span class="trust-number">24</span>
+                <div class="trust-label">Hour Response Time</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="reviews" id="reviews">
+        <h2 class="section-title">What Our Clients Say</h2>
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <div class="review-text">"Multani Law Group helped my family navigate a complex immigration case with incredible professionalism. They were always available to answer our questions and made the process so much less stressful. Highly recommend!"</div>
+                <div class="reviewer-name">Sarah M.</div>
+            </div>
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <div class="review-text">"Outstanding service from start to finish. The attorneys at Multani Law Group are knowledgeable, compassionate, and truly care about their clients. They secured my green card without any issues."</div>
+                <div class="reviewer-name">Raj P.</div>
+            </div>
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <div class="review-text">"Professional, reliable, and effective. When we faced deportation proceedings, Multani Law Group fought for our family and won. We're forever grateful for their expertise and dedication."</div>
+                <div class="reviewer-name">Maria L.</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="contact-content">
+            <h2 class="section-title" style="color: white;">Get Your Free Consultation</h2>
+            
+            <div class="emergency-notice">
+                <strong>Emergency Immigration Matter?</strong> Call us immediately at (206) 703-4777 for urgent assistance.
+            </div>
+
+            <form class="contact-form" action="https://formspree.io/f/mdajddkv" method="POST">
+                <input type="hidden" name="_replyto" value="">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Tell Us About Your Case</label>
+                    <textarea id="message" name="message" placeholder="Please describe your immigration situation and how we can help you..." required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>Multani Law Group – Immigration Lawyers</h3>
+                <p>13106 SE 240th St Suite 202, Kent, WA 98031, USA</p>
+                <p>Phone: (206) 703-4777</p>
+                <p>★★★★★ 5.0 Stars (50+ Google Reviews)</p>
+            </div>
+            <p>&copy; 2026 Multani Law Group. All rights reserved. | Serving the greater Seattle-Tacoma area including Kent, Renton, Federal Way, Auburn, and surrounding communities.</p>
+        </div>
+    </footer>
+</body>
+</html>

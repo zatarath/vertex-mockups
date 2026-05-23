@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Lau Immigration Law, PLLC - Trusted Immigration Attorneys in SeaTac, WA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --navy-blue: #1a2742;
+            --dark-navy: #0f1b2a;
+            --gold: #d4af37;
+            --light-gold: #f4e8a6;
+            --white: #ffffff;
+            --light-gray: #f8f9fa;
+            --text-dark: #2c3e50;
+            --text-light: #6c757d;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+
+        .demo-banner {
+            background: #1a1a2e;
+            color: #e2c96e;
+            font-size: 0.8rem;
+            padding: 8px 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .demo-banner a {
+            background: #e2c96e;
+            color: #1a1a2e;
+            padding: 4px 12px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s ease;
+        }
+
+        .demo-banner a:hover {
+            opacity: 0.8;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(26, 39, 66, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            color: var(--white);
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .nav-phone {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .btn {
+            background: var(--gold);
+            color: var(--navy-blue);
+            padding: 0.7rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: var(--light-gold);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--gold);
+            border: 2px solid var(--gold);
+        }
+
+        .btn-outline:hover {
+            background: var(--gold);
+            color: var(--navy-blue);
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--navy-blue) 0%, var(--dark-navy) 100%);
+            color: var(--white);
+            padding: 8rem 2rem 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon fill="%23ffffff" fill-opacity="0.03" points="0,1000 1000,0 1000,1000"/></svg>');
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            opacity: 0;
+            animation: fadeInUp 1s ease 0.5s forwards;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0;
+            animation: fadeInUp 1s ease 0.7s forwards;
+        }
+
+        .hero-ctas {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            opacity: 0;
+            animation: fadeInUp 1s ease 0.9s forwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section {
+            padding: 4rem 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--navy-blue);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border-top: 4px solid var(--gold);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: var(--gold);
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: var(--navy-blue);
+        }
+
+        .trust-signals {
+            background: var(--light-gray);
+        }
+
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .trust-item {
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        .trust-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--gold);
+            display: block;
+        }
+
+        .trust-label {
+            font-weight: 600;
+            color: var(--navy-blue);
+            margin-top: 0.5rem;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .review-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .stars {
+            color: var(--gold);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .review-text {
+            font-style: italic;
+            margin-bottom: 1rem;
+            color: var(--text-light);
+        }
+
+        .reviewer-name {
+            font-weight: 600;
+            color: var(--navy-blue);
+        }
+
+        .contact {
+            background: var(--navy-blue);
+            color: var(--white);
+        }
+
+        .contact .section-title {
+            color: var(--white);
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 1rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--white);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .form-control::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--gold);
+            box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+        }
+
+        textarea.form-control {
+            height: 120px;
+            resize: vertical;
+        }
+
+        .footer {
+            background: var(--dark-navy);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-info {
+            margin-bottom: 1rem;
+        }
+
+        .footer-info p {
+            margin-bottom: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .hero-ctas {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav-container {
+                padding: 0 1rem;
+            }
+
+            .logo {
+                font-size: 1.2rem;
+            }
+
+            .nav-phone {
+                display: none;
+            }
+
+            .section {
+                padding: 3rem 1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .demo-banner {
+                flex-direction: column;
+                gap: 0.5rem;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-banner">
+        <span>✦ Demo site created for Lau Immigration Law, PLLC by Vertex Consulting Group</span>
+        <a href="mailto:tarik@vertexconsultinggroup.com">Get Your Site →</a>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">Lau Immigration Law</a>
+            <div class="nav-right">
+                <a href="tel:2062890338" class="nav-phone">(206) 289-0338</a>
+                <a href="#contact" class="btn">Book a Call</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Your Trusted Immigration Law Partner</h1>
+            <p>Navigate your immigration journey with confidence. Experienced attorneys providing personalized legal solutions for families and businesses in the Seattle area.</p>
+            <div class="hero-ctas">
+                <a href="#contact" class="btn">Book Free Consultation</a>
+                <a href="tel:2062890338" class="btn btn-outline">Call Now</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Our Immigration Services</h2>
+            <p class="section-subtitle">Comprehensive immigration legal services tailored to your unique situation</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">👨‍👩‍👧‍👦</div>
+                    <h3>Family Immigration</h3>
+                    <p>Reunite with loved ones through family-based petitions, marriage visas, and adjustment of status applications. We guide you through every step of bringing your family together.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💼</div>
+                    <h3>Business Visas</h3>
+                    <p>H-1B, L-1, O-1, and other employment-based visas for skilled professionals. We help businesses and individuals navigate complex work visa requirements.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🇺🇸</div>
+                    <h3>Citizenship & Naturalization</h3>
+                    <p>Complete your American dream with citizenship applications, naturalization ceremonies, and oath preparation. We ensure your path to citizenship is smooth.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🛡️</div>
+                    <h3>Deportation Defense</h3>
+                    <p>Experienced representation in removal proceedings and immigration court. Protecting your right to remain in the United States with aggressive advocacy.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section trust-signals">
+        <div class="container">
+            <h2 class="section-title">Why Choose Lau Immigration Law</h2>
+            <div class="trust-grid">
+                <div class="trust-item">
+                    <span class="trust-number">15+</span>
+                    <div class="trust-label">Years of Experience</div>
+                    <p>Dedicated immigration law practice with proven results</p>
+                </div>
+                <div class="trust-item">
+                    <span class="trust-number">5</span>
+                    <div class="trust-label">Languages Spoken</div>
+                    <p>English, Mandarin, Cantonese, Vietnamese, Spanish</p>
+                </div>
+                <div class="trust-item">
+                    <span class="trust-number">24hr</span>
+                    <div class="trust-label">Response Time</div>
+                    <p>Quick communication and updates on your case</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Client Success Stories</h2>
+            <p class="section-subtitle">Rated 4.8 stars on Google with 24+ reviews from satisfied clients</p>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">"Attorney Lau helped my family navigate a complex immigration case with patience and expertise. Her multilingual support made all the difference. Highly recommended!"</p>
+                    <div class="reviewer-name">- Maria S.</div>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">"Professional, knowledgeable, and caring. Lau Immigration Law made my H-1B visa process smooth and stress-free. Excellent communication throughout."</p>
+                    <div class="reviewer-name">- David Chen</div>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">"After years of uncertainty, Attorney Lau successfully helped me obtain my green card. Her dedication and expertise gave me hope when I had none."</p>
+                    <div class="reviewer-name">- Jennifer L.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Schedule Your Consultation</h2>
+            <p class="section-subtitle">Take the first step toward achieving your immigration goals. Contact us today for a personalized consultation.</p>
+            <form class="contact-form" action="https://formspree.io/f/mdajddkv" method="POST">
+                <input type="hidden" name="_replyto" value="">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" class="form-control" required placeholder="Your full name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" class="form-control" required placeholder="your.email@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" class="form-control" placeholder="(206) 123-4567">
+                </div>
+                <div class="form-group">
+                    <label for="language">Preferred Language</label>
+                    <select id="language" name="language" class="form-control">
+                        <option value="English">English</option>
+                        <option value="Mandarin">Mandarin</option>
+                        <option value="Cantonese">Cantonese</option>
+                        <option value="Vietnamese">Vietnamese</option>
+                        <option value="Spanish">Spanish</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Tell us about your immigration needs *</label>
+                    <textarea id="message" name="message" class="form-control" required placeholder="Please describe your immigration situation and how we can help you..."></textarea>
+                </div>
+                <button type="submit" class="btn" style="width: 100%;">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <p><strong>Lau Immigration Law, PLLC</strong></p>
+                <p>16400 Southcenter Pkwy Suite 402, Tukwila, WA 98188</p>
+                <p>Phone: <a href="tel:2062890338" style="color: var(--gold);">(206) 289-0338</a></p>
+            </div>
+            <p>&copy; 2026 Lau Immigration Law, PLLC. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
