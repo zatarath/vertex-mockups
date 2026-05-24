@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Ortiz Law Office, PLLC - Immigration Lawyers in Burien, WA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        .demo-banner {
+            background: #1a1a2e;
+            color: #e2c96e;
+            font-size: 0.8rem;
+            padding: 8px 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .demo-banner a {
+            background: #e2c96e;
+            color: #1a1a2e;
+            text-decoration: none;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .demo-banner a:hover {
+            background: #f0d970;
+        }
+
+        .navbar {
+            background: #fff;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1B365D;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .phone {
+            color: #1B365D;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .btn-primary {
+            background: #B8860B;
+            color: white;
+            padding: 0.7rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            background: #9a7209;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #B8860B;
+            padding: 0.7rem 1.5rem;
+            text-decoration: none;
+            border: 2px solid #B8860B;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-right: 1rem;
+        }
+
+        .btn-secondary:hover {
+            background: #B8860B;
+            color: white;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #1B365D 0%, #2c4f73 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+            animation: fadeIn 1s ease-in;
+        }
+
+        .hero-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .lang-toggle {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: 1px solid rgba(255,255,255,0.3);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+
+        .section {
+            padding: 4rem 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1B365D;
+            margin-bottom: 3rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: #B8860B;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            color: #1B365D;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: #B8860B;
+            margin-bottom: 1rem;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .review-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-left: 4px solid #B8860B;
+        }
+
+        .stars {
+            color: #B8860B;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .review-text {
+            font-style: italic;
+            margin-bottom: 1rem;
+            color: #555;
+        }
+
+        .reviewer {
+            font-weight: 600;
+            color: #1B365D;
+        }
+
+        .contact {
+            background: #f8f9fa;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #1B365D;
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #B8860B;
+        }
+
+        .contact-info h3 {
+            color: #1B365D;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .contact-details {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            gap: 1rem;
+        }
+
+        .contact-item-icon {
+            color: #B8860B;
+            font-size: 1.2rem;
+            width: 24px;
+        }
+
+        .footer {
+            background: #1B365D;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .nav-right .phone {
+                display: none;
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .demo-banner {
+                text-align: center;
+                flex-direction: column;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn-secondary {
+                margin-right: 0;
+                margin-bottom: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .hero {
+                padding: 2rem 0;
+            }
+
+            .section {
+                padding: 2rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-banner">
+        <span>✦ Demo site created for Ortiz Law Office, PLLC by Vertex Consulting Group</span>
+        <a href="https://calendly.com/tarikalem10/30min">Book a Call →</a>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Ortiz Law Office, PLLC</div>
+            <div class="nav-right">
+                <a href="tel:2066022598" class="phone">(206) 602-2598</a>
+                <a href="https://calendly.com/tarikalem10/30min" class="btn-primary">Book a Call</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <button class="lang-toggle">Español</button>
+        <div class="hero-container">
+            <h1>Your Path to American Dreams Starts Here</h1>
+            <p>Experienced immigration attorneys helping families reunite, achieve citizenship, and build their future in America. We understand your journey and are here to guide you every step of the way.</p>
+            <div class="hero-buttons">
+                <a href="https://calendly.com/tarikalem10/30min" class="btn-secondary">Book Free Consultation</a>
+                <a href="tel:2066022598" class="btn-primary">Call Now</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="services">
+        <div class="container">
+            <h2 class="section-title">Our Immigration Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">👨‍👩‍👧‍👦</div>
+                    <h3>Family Immigration</h3>
+                    <p>Reunite with your loved ones through family-based petitions, spouse visas, and relative sponsorship. We handle the complex paperwork so families can be together.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🇺🇸</div>
+                    <h3>Citizenship & Naturalization</h3>
+                    <p>Navigate the path to U.S. citizenship with confidence. From green card applications to naturalization ceremonies, we're with you every step.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">⚖️</div>
+                    <h3>Deportation Defense</h3>
+                    <p>Aggressive representation in removal proceedings. Protect your right to remain in the United States with experienced legal advocacy.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💼</div>
+                    <h3>Work Visas & Employment</h3>
+                    <p>Secure work authorization and employment-based visas. Help employers navigate the hiring process for international talent.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Why Choose Ortiz Law Office</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⭐</div>
+                    <h3>5.0 Star Rating</h3>
+                    <p>Perfect Google rating from 15+ satisfied clients who achieved their immigration goals with our dedicated legal support.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🏛️</div>
+                    <h3>Licensed & Experienced</h3>
+                    <p>Washington State Bar admitted attorney with deep knowledge of federal immigration law and local community needs.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌎</div>
+                    <h3>Bilingual Service</h3>
+                    <p>Fluent Spanish and English services ensuring clear communication throughout your immigration journey.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background: #f8f9fa;">
+        <div class="container">
+            <h2 class="section-title">What Our Clients Say</h2>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">"Attorney Ortiz helped my family navigate a complex immigration case with compassion and expertise. Thanks to their dedication, we're now permanent residents. Highly recommend!"</p>
+                    <div class="reviewer">- Maria Rodriguez</div>
+                </div>
+                <div class="review-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">"Professional, knowledgeable, and caring. The Ortiz Law Office made our citizenship dream come true. They explained everything clearly and kept us informed throughout the process."</p>
+                    <div class="reviewer">- Carlos Mendoza</div>
+                </div>
+                <div class="review-card">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">"Excellent immigration lawyers who truly care about their clients. They fought for us when we thought all hope was lost. Forever grateful for their service."</p>
+                    <div class="reviewer">- Ana Silva</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us Today</h2>
+            <div class="contact-content">
+                <div class="contact-form">
+                    <h3>Schedule Your Free Consultation</h3>
+                    <form action="https://formspree.io/f/mdajddkv" method="POST">
+                        <input type="hidden" name="_replyto" value="">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Tell Us About Your Case</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary" style="width: 100%;">Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-details">
+                    <h3>Get In Touch</h3>
+                    <div class="contact-item">
+                        <div class="contact-item-icon">📍</div>
+                        <div>630 SW 149th St, Suite 102<br>Burien, WA 98166</div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon">📞</div>
+                        <div><a href="tel:2066022598" style="color: inherit; text-decoration: none;">(206) 602-2598</a></div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon">⭐</div>
+                        <div>5.0 Stars - 15 Google Reviews</div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item-icon">🕒</div>
+                        <div>Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: By Appointment</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div>630 SW 149th St, Suite 102, Burien, WA 98166</div>
+                    <div>(206) 602-2598</div>
+                </div>
+                <div>© 2026 Ortiz Law Office, PLLC. All rights reserved.</div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
